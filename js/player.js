@@ -50,7 +50,7 @@ const music_list = [
 ];
 
 loadTrack(track_index);
-function loadTrack(track_index) {
+async function loadTrack(track_index) {
     clearInterval(updateTimer);
     reset();
     current_track.src = music_list[track_index].music;
@@ -65,16 +65,16 @@ function loadTrack(track_index) {
     current_track.addEventListener("ended", nextTrack);
 }
 
-function reset() {
+async function reset() {
     current_time.textContent = "00:00";
     total_time.textContent = "00:00";
     seek_slider.value = 0;
 }
-function playpauseTrack() {
+async function playpauseTrack() {
     isPlaying ? pauseTrack() : playTrack();
 }
 
-function playTrack() {
+async function playTrack() {
     let playPromise = current_track.play();
 
     if (playPromise !== undefined) {
@@ -90,13 +90,13 @@ function playTrack() {
             });
     }
 }
-function pauseTrack() {
+async function pauseTrack() {
     current_track.pause();
     isPlaying = false;
     track_art.classList.remove("rotate");
     playpause_btn.innerHTML = "<i class='fa-solid fa-circle-play fa-2x'></i>";
 }
-function nextTrack() {
+async function nextTrack() {
     if (track_index < music_list.length - 1) {
         track_index += 1;
     } else {
@@ -105,7 +105,7 @@ function nextTrack() {
     loadTrack(track_index);
     playTrack();
 }
-function prevTrack() {
+async function prevTrack() {
     if (track_index > 0) {
         track_index -= 1;
     } else {
@@ -114,11 +114,11 @@ function prevTrack() {
     loadTrack(track_index);
     playTrack();
 }
-function seekTo() {
+async function seekTo() {
     let seekto = current_track.duration * (seek_slider.value / 100);
     current_track.currentTime = seekto;
 }
-function setUpdate() {
+async function setUpdate() {
     let seekPosition = 0;
     if (!isNaN(current_track.duration)) {
         seekPosition =
