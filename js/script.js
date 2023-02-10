@@ -3,11 +3,6 @@ window.addEventListener("scroll", () => {
     header.classList.toggle("sticky", window.scrollY > 0);
     const menuItem = header.querySelector(".menu__item");
     menuItem.style.display = window.scrollY > 0 ? "" : "none";
-
-    if (!isPlaying && !isPlayingNow && window.scrollY != 0) {
-        playTrack();
-        isPlayingNow = true;
-    }
 });
 
 document.addEventListener("click", (e) => {
@@ -73,64 +68,7 @@ const swiper = new Swiper(".swiper", {
     },
 });
 
-// async function placeReason() {
-//     let reason = await fetch("js/reason.json");
-//     reason = await reason.json();
-//     let reasons = document.body.querySelector(".reasons");
-//     let x = { 0: [0, 0] };
-//     let y = { 0: [0, 0] };
-
-//     for (let i in reason) {
-//         let span = document.createElement("span");
-//         span.className = "reasons__reason";
-//         span.innerHTML = reason[i];
-//         reasons.append(span);
-//         span.style.setProperty("--bf-width", span.offsetWidth - 3 + "px");
-//         span.style.setProperty("--bf-height", span.offsetHeight - 3 + "px");
-
-//         let parentReasons = document.body.querySelector(".reasons");
-//         let maxX = parentReasons.offsetWidth - span.offsetWidth;
-//         let maxY = parentReasons.offsetHeight - span.offsetHeight;
-
-//         let randomX = [0, 0];
-//         let randomY = [0, 0];
-//         let isNotPos = true;
-//         let isX = false,
-//             isY = false;
-//         while (isNotPos) {
-//             for (let a = 0; a < Object.keys(x).length; a++) {
-//                 if (randomX[0] >= x[a][0] && randomX[0] <= x[a][1]) {
-//                     randomX[0] = Math.floor(Math.random() * maxX);
-//                     console.log(randomX[0]);
-//                 } else {
-//                     let newX = [randomX[0], randomX[0] + span.offsetWidth];
-//                     x[Object.keys(x).length] = newX;
-//                     span.style.left = newX[0] + "px";
-//                     isX = true;
-//                 }
-//             }
-//             console.log(randomX);
-
-//             for (let a = 0; a < Object.keys(y).length; a++) {
-//                 if (randomY[0] >= y[a][0] && randomY[0] <= y[a][1]) {
-//                     randomY[0] = Math.floor(Math.random() * maxY);
-//                 } else {
-//                     let newY = [randomY[0], randomY[0] + span.offsetHeight];
-//                     y[Object.keys(y).length] = newY;
-//                     span.style.top = newY[0] + "px";
-//                     isY = true;
-//                 }
-//             }
-//             console.log(randomY);
-
-//             if (isX && isY) isNotPos = false;
-//             setTimeout(() => {
-//                 console.log("#");
-//             }, 1000);
-//         }
-//     }
-
-//     console.log(reason);
-// }
-
-// placeReason();
+if (!isPlaying && !isPlayingNow) {
+    playTrack();
+    isPlayingNow = true;
+}
