@@ -513,6 +513,10 @@ section {
     width: 50vw;
     max-width: 300px;
   }
+  .reasons__reason_img {
+    max-height: 340px;
+    height: auto;
+  }
   .reason_heart {
     display: none;
   }
@@ -529,9 +533,13 @@ section {
     display: none;
   }
   #banner {
+    height: 100vh;
+  }
+  #banner .date {
     display: none;
   }
   .date {
+    background: rgba(228, 0, 125, 0.7);
     position: relative;
     top: 0;
     left: 0;
@@ -576,11 +584,19 @@ section {
 }
 
 @media (max-width: 480px) {
+  #reason {
+    padding: 40px 0;
+  }
   .reasons__reason {
     padding: 5px;
   }
   .reason_text {
+    font-size: 20px;
     line-height: 30px;
+    width: 90%;
+  }
+  .swiper-slide {
+    padding: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
