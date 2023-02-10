@@ -308,6 +308,7 @@ section {
   max-width: none;
   min-width: auto;
   min-height: auto;
+  width: 40vw;
   height: 100%;
   border-radius: 2px;
 }
