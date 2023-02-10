@@ -143,4 +143,3 @@ async function setUpdate() {
         total_time.textContent = durationMinutes + ":" + durationSeconds;
     }
 }
-console.log('Test async');
