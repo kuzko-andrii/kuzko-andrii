@@ -99,10 +99,11 @@ section {
 }
 
 .banner__text {
-  color: white;
+  color: #fff;
   font-weight: 400;
-  font-size: 1.7em;
+  font-size: 1.9em;
   text-align: center;
+  font-family: "Marck Script", cursive;
 }
 
 .date {
@@ -308,11 +309,11 @@ section {
 }
 
 .reasons__reason_img img {
-  max-width: 320px;
-  min-width: auto;
-  min-height: auto;
+  max-height: 330px;
   border-radius: 2px;
   width: 25vw;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .reasons__reason_img img:last-child {
@@ -511,9 +512,6 @@ section {
   .date__photo img {
     width: 50vw;
     max-width: 300px;
-  }
-  .reasons__reason_img {
-    height: 30vw;
   }
   .reason_heart {
     display: none;

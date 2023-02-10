@@ -71,10 +71,11 @@ section {
     padding-bottom: calc(20px + 150px);
 }
 .banner__text {
-    color: white;
+    color: #fff;
     font-weight: 400;
-    font-size: 1.7em;
+    font-size: 1.9em;
     text-align: center;
+    font-family: "Marck Script", cursive;
 }
 
 .date {
@@ -208,11 +209,10 @@ section {
     align-items: center;
 }
 .reasons__reason_img img {
-    max-width: 320px;
-    min-width: auto;
-    min-height: auto;
+    max-height: 330px;
     border-radius: 2px;
     width: 25vw;
+    object-fit: cover;
 }
 .reasons__reason_img img:last-child {
     margin-left: 20px;
@@ -371,9 +371,6 @@ section {
         max-width: 300px;
     }
 
-    .reasons__reason_img {
-        height: 30vw;
-    }
     .reason_heart {
         display: none;
     }
