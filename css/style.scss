@@ -205,6 +205,7 @@ section {
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .reasons__reason_img img {
     max-width: none;
@@ -212,6 +213,7 @@ section {
     min-height: auto;
     height: 100%;
     border-radius: 2px;
+    width: 25vw;
 }
 .reasons__reason_img img:last-child {
     margin-left: 20px;

@@ -302,15 +302,18 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .reasons__reason_img img {
   max-width: none;
   min-width: auto;
   min-height: auto;
-  width: 40vw;
   height: 100%;
   border-radius: 2px;
+  width: 25vw;
 }
 
 .reasons__reason_img img:last-child {
