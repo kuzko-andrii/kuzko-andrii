@@ -33,6 +33,9 @@ header.sticky {
     font-size: 1.1em;
     color: #fff;
 }
+.menu__item:first-child {
+    display: none;
+}
 .menu__item::before {
     content: "";
     position: absolute;
@@ -284,6 +287,15 @@ section {
     color: #fff;
 }
 
+#video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#video video {
+    width: 30vw;
+}
+
 #why {
     background: rgba(#836bb3, 0.5);
     width: 100%;
@@ -378,6 +390,11 @@ section {
     .reason_heart {
         display: none;
     }
+
+    #video video {
+        width: 40vw;
+    }
+
     #why {
         padding: 25px;
     }
@@ -434,6 +451,10 @@ section {
         display: none;
     }
 
+    #video video {
+        width: 60vw;
+    }
+
     .why__content {
         font-size: 1em;
     }
@@ -453,5 +474,9 @@ section {
     }
     .swiper-slide {
         padding: 0;
+    }
+
+    #video video {
+        width: 70vw;
     }
 }
